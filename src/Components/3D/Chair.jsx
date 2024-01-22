@@ -1,9 +1,9 @@
+import { useControls } from "leva";
 import React, { useRef } from "react";
 import { useGLTF } from "@react-three/drei";
-import { useControls } from "leva";
 
 export function Model(props) {
-  const { nodes, materials } = useGLTF("/model1.glb");
+  const { nodes, materials } = useGLTF("/Chair.glb");
   // const { position, rotation } = useControls("chair", {
   //   position: {
   //     value: [-6.40000000000001, 0.6999999999999996, 5.699999999999998],
@@ -14,19 +14,233 @@ export function Model(props) {
   //     step: 0.1,
   //   },
   // });
-
   return (
     <group
       {...props}
       dispose={null}
-      scale={0.0002}
-      position={[-3.7000000000000175, 0.6999999999999996, 6.699999999999997]}
-      rotation={[0, 1.8, 0]}
+      scale={0.004}
+      position={[-6.40000000000001, 0.6999999999999996, 5.699999999999998]}
     >
       <mesh
         castShadow
         receiveShadow
         geometry={nodes.Box001.geometry}
+        material={materials.Material}
+      />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.Plane013.geometry}
+        material={materials.Material}
+      />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.Plane014.geometry}
+        material={materials.Material}
+      />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.Sphere002.geometry}
+        material={materials.Material}
+      />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.Sphere003.geometry}
+        material={materials.Material}
+      />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.Sphere004.geometry}
+        material={materials.Material}
+      />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.Sphere005.geometry}
+        material={materials.Material}
+      />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.Sphere006.geometry}
+        material={materials.Material}
+      />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.Sphere007.geometry}
+        material={materials.Material}
+      />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.Sphere008.geometry}
+        material={materials.Material}
+      />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.Sphere009.geometry}
+        material={materials.Material}
+      />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.Sphere010.geometry}
+        material={materials.Material}
+      />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.Sphere011.geometry}
+        material={materials.Material}
+      />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.Sphere012.geometry}
+        material={materials.Material}
+      />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.Sphere013.geometry}
+        material={materials.Material}
+      />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.Sphere014.geometry}
+        material={materials.Material}
+      />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.Sphere015.geometry}
+        material={materials.Material}
+      />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.Sphere016.geometry}
+        material={materials.Material}
+      />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.Sphere017.geometry}
+        material={materials.Material}
+      />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.Sphere018.geometry}
+        material={materials.Material}
+      />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.Sphere019.geometry}
+        material={materials.Material}
+      />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.Sphere020.geometry}
+        material={materials.Material}
+      />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.Sphere021.geometry}
+        material={materials.Material}
+      />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.Sphere022.geometry}
+        material={materials.Material}
+      />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.Sphere023.geometry}
+        material={materials.Material}
+      />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.Sphere024.geometry}
+        material={materials.Material}
+      />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.Sphere025.geometry}
+        material={materials.Material}
+      />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.Sphere026.geometry}
+        material={materials.Material}
+      />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.Sphere027.geometry}
+        material={materials.Material}
+      />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.Sphere028.geometry}
+        material={materials.Material}
+      />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.Sphere029.geometry}
+        material={materials.Material}
+      />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.Sphere030.geometry}
+        material={materials.Material}
+      />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.Sphere031.geometry}
+        material={materials.Material}
+      />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.Sphere032.geometry}
+        material={materials.Material}
+      />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.Sphere033.geometry}
+        material={materials.Material}
+      />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.Sphere034.geometry}
+        material={materials.Material}
+      />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.Box002.geometry}
         material={materials.Material}
       />
       <mesh
@@ -38,23 +252,17 @@ export function Model(props) {
       <mesh
         castShadow
         receiveShadow
+        geometry={nodes.Box004.geometry}
+        material={materials.Material}
+      />
+      <mesh
+        castShadow
+        receiveShadow
         geometry={nodes.Box005.geometry}
-        material={materials.Material}
-      />
-      <mesh
-        castShadow
-        receiveShadow
-        geometry={nodes.Box007.geometry}
-        material={materials.Material}
-      />
-      <mesh
-        castShadow
-        receiveShadow
-        geometry={nodes.Box008.geometry}
         material={materials.Material}
       />
     </group>
   );
 }
 
-useGLTF.preload("/model1.glb");
+useGLTF.preload("/Chair.glb");

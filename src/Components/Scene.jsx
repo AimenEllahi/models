@@ -1,36 +1,35 @@
+import Loader from "./Loader";
 import React, { Suspense } from "react";
 import { Canvas } from "@react-three/fiber";
-import { OrbitControls, Environment, Sky } from "@react-three/drei";
-import { Model as City } from "./3D/Isometric-cityscape13";
-import GrassPlatform from "./GrassPlatform";
-import Loader from "./Loader";
+import { Sky, OrbitControls, Environment } from "@react-three/drei";
+import Grass from "./Grass";
+import { Model as Chair } from "./3D/Chair";
+import { Model as Sofa } from "./3D/Sofa";
 
 export default function Scene() {
   return (
     <div className="h-screen w-screen">
-      <Canvas camera={{ rotation: [0, 2, 0] }}>
-        <color attach="background" args={["#171720"]} />
+      {" "}
+      <Canvas camera={{ position: [0, 15, 5] }}>
+        <Sky azimuth={1} inclination={0.6} distance={1000} />
+        <ambientLight intensity={2} />
+        <directionalLight
+          position={[0, 10, 0]}
+          intensity={1}
+          color={0xec8f5e}
+        />
 
-        <ambientLight color={0xe8c37b} intensity={2} />
-        <directionalLight
-          position={[-10, 10, 10]}
-          intensity={6}
-          color={0xec8f5e}
-        />
-        <directionalLight
-          color={0xec8f5e}
-          position={[-69, 24, 14]}
-          intensity={6}
-        />
+        <pointLight position={[10, 10, 10]} />
         <Suspense fallback={<Loader />}>
-          <Environment preset="forest" />
-          <Sky sunPosition={[5, 5, 5]} />
-          <group>
-            {/* <GrassPlatform /> */}
-            <City />
-          </group>
+          <Environment preset="sunset" />
+          <Grass />
+          <Chair />
+          <Sofa />
         </Suspense>
-        {/* <OrbitControls /> */}
+        <OrbitControls
+          minPolarAngle={Math.PI / 2.5}
+          maxPolarAngle={Math.PI / 2.5}
+        />
       </Canvas>
     </div>
   );
