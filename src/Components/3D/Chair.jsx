@@ -19,7 +19,7 @@ export function Model(props) {
       {...props}
       dispose={null}
       scale={0.004}
-      position={[-6.40000000000001, 0.6999999999999996, 5.699999999999998]}
+      position={[-6.40000000000001, 0.6999999999999996, 2.699999999999998]}
     >
       <mesh
         castShadow

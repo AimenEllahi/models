@@ -9,8 +9,7 @@ import { Model as Sofa } from "./3D/Sofa";
 export default function Scene() {
   return (
     <div className="h-screen w-screen">
-      {" "}
-      <Canvas camera={{ position: [0, 15, 5] }}>
+      <Canvas>
         <Sky azimuth={1} inclination={0.6} distance={1000} />
         <ambientLight intensity={2} />
         <directionalLight
@@ -22,9 +21,11 @@ export default function Scene() {
         <pointLight position={[10, 10, 10]} />
         <Suspense fallback={<Loader />}>
           <Environment preset="sunset" />
-          <Grass />
-          <Chair />
-          <Sofa />
+          <group rotation={[0, 0.3, 0]}>
+            <Grass />
+            <Chair />
+            <Sofa />
+          </group>
         </Suspense>
         <OrbitControls
           minPolarAngle={Math.PI / 2.5}
